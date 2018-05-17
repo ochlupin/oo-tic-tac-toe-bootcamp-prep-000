@@ -101,9 +101,9 @@ def over?
  won? || draw? || full?
 end
 
-def winner(board)
-  if win_combination = won?(board)
-    board[win_combination[0]]
+def winner
+  if win_combination = won?
+    @board[win_combination[0]]
   end
 end
 
