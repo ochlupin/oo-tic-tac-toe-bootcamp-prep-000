@@ -87,14 +87,14 @@ def won?
     return false
 end
 
-def full?(board)
-  board.all? do |player|
+def full?
+  @board.all? do |player|
     player == "X" || player =="O"
   end
 end
 
-def draw?(board)
-full?(board) && !won?(board)
+def draw?
+full && !won?
 end
 
 def over?(board)
