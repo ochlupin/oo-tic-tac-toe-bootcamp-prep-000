@@ -107,11 +107,11 @@ def winner
   end
 end
 
-def play(board)
-  until over?(board) do
-    turn(board)
+def play
+  until over? do
+    turn
   end
-  player = winner(board)
+  player = winner
   if player != nil
   puts "Congratulations #{player}!"
   else
