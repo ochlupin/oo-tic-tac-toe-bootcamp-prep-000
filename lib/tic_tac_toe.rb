@@ -53,7 +53,7 @@ end
 
 def turn_count
 turn_counter = 0
-board.each do |position|
+@board.each do |position|
   if position == "X" || position == "O"
     turn_counter += 1
   end
@@ -61,8 +61,8 @@ end
   turn_counter
 end
 
-def current_player(board)
-  turn = turn_count(board)
+def current_player
+  turn = turn_count
   if turn % 2 == 0
     return "X"
   else
